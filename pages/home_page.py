@@ -19,12 +19,11 @@ class HomePage(BasePage):
         return self.is_present(self.HERO, timeout=15)
 
     def go_to_careers(self):
-        # 1) Company menyusu varsa: click Company -> Careers
         if self.is_present(self.COMPANY_MENU, timeout=3):
             self.click(self.COMPANY_MENU)
             self.click(self.CAREERS_LINK)
             return
 
-        # 2) fallback: birbaşa careers
+        # 2) fallback
         self.open("https://useinsider.com/careers/")
         self.accept_cookies_if_present()
