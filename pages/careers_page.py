@@ -1,6 +1,6 @@
 from selenium.webdriver.common.by import By
 from pages.base_page import BasePage
-g
+
 
 class CareersPage(BasePage):
     URL = "https://useinsider.com/careers/"
